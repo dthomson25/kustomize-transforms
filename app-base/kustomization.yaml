@@ -1,8 +1,8 @@
 resources:
 - https://github.com/dthomson25/kustomize-transforms//remote-base
 
-patches:
-- https://raw.githubusercontent.com/dthomson25/kustomize-transforms/master/add-side-car-patch/deployment-patch.yaml
+# patches:
+# - https://raw.githubusercontent.com/dthomson25/kustomize-transforms/master/add-side-car-patch/deployment-patch.yaml
 
 transformers:
 - https://github.com/dthomson25/kustomize-transforms//add-side-car-transform
