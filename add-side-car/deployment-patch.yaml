@@ -16,7 +16,5 @@ patch: |-
     template:
       spec:
         containers:
-        - name: nginx
-          env:
-          - name: add-env
-            value: env
+        - name: side-car
+          image: docker/whalesay

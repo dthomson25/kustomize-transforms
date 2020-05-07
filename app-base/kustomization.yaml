@@ -1,5 +1,5 @@
 resources:
-- ../remote-base
+- https://github.com/dthomson25/kustomize-transforms//remote-base
 
 transformers:
-- ../app-base-patch # splunk example
+- https://github.com/dthomson25/kustomize-transforms//add-side-car

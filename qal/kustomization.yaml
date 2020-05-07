@@ -3,9 +3,7 @@ resources:
 
 patchesStrategicMerge:
 - deployment-patch.yaml
-# - rollout-patch.yaml
 
 transformers:
-# - ../duplicate-deployment 
-- ../convert-to-rollout
-- rollout-strategy/
+- https://github.com/dthomson25/kustomize-transforms//convert-to-rollout
+- add-rollout-strategy/
