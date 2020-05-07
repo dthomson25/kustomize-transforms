@@ -1,0 +1,23 @@
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: changeKindApiVersion
+target:
+  group: argoproj.io
+  version: v1alpha1
+  kind: Rollout
+  name: nginx-deployment
+patch:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Rollout
+    metadata:
+        name: nginx-deployment
+    spec:
+        strategy:
+            canary:
+                steps:
+                - setWeight: 5
+                - pause: {}
+                - setWeight: 50
+                - pause:
+                    duration: 10m

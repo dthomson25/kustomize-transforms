@@ -1,0 +1,5 @@
+resources:
+- ../remote-base
+
+transformers:
+- ../app-base-patch # splunk example

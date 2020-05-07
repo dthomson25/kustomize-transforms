@@ -1,0 +1,16 @@
+apiVersion: builtin
+kind: PatchTransformer
+metadata:
+  name: changeKindApiVersion
+target:
+  group: apps
+  version: v1
+  kind: Deployment
+  name: nginx-deployment
+patch: |-
+  - op: replace
+    path: /kind
+    value: Rollout
+  - op: replace
+    path: /apiVersion
+    value: argoproj.io/v1alpha1

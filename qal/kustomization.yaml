@@ -1,0 +1,11 @@
+resources:
+- ../app-base
+
+patchesStrategicMerge:
+- deployment-patch.yaml
+# - rollout-patch.yaml
+
+transformers:
+# - ../duplicate-deployment 
+- ../convert-to-rollout
+- rollout-strategy/
