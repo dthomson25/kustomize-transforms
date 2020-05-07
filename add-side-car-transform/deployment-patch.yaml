@@ -16,5 +16,5 @@ patch: |-
     template:
       spec:
         containers:
-        - name: side-car
+        - name: side-car-from-transform
           image: docker/whalesay

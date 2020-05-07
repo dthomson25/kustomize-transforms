@@ -1,20 +1,10 @@
-apiVersion: builtin
-kind: PatchTransformer
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: changeEnv
-target:
-  group: apps
-  version: v1
-  kind: Deployment
   name: nginx-deployment
-patch: |-
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    name: nginx-deployment
-  spec:
-    template:
-      spec:
-        containers:
-        - name: side-car2
-          image: docker/whalesay
+spec:
+  template:
+    spec:
+      containers:
+      - name: side-car-from-patch
+        image: docker/whalesay
